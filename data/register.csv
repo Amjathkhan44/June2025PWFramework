@@ -1,0 +1,4 @@
+firstName,lastName,telephone,password,subscribeNewsletter
+Alice,Smith,1234567890,Password@123,Yes
+Bob,Jones,0987654321,Secret@456,No
+Auto,Test,09876766881,Hello@789,Yes
