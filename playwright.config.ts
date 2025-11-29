@@ -36,7 +36,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     trace: 'on-first-retry',
-    headless: false,
+    headless: true,
     screenshot: 'on-first-failure',
     video: 'off',
     baseURL: 'https://naveenautomationlabs.com/opencart/index.php',
