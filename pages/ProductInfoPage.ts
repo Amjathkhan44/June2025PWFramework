@@ -29,7 +29,7 @@ export class ProductInfoPage {
     }
 
     async getProductImagesCount(): Promise<number> {
-        await this.eleUtil.waitForElementVisible(this.imageCount) //Use this to handle the image loading issue.
+        await this.eleUtil.waitForElementVisible(this.imageCount); //Use this to handle the image loading issue.
         const imagesCount = await this.imageCount.count();
         console.log(`Total number of images for ${await this.getProductHeader()} ==> ${imagesCount}`);
         return imagesCount;
@@ -61,11 +61,11 @@ export class ProductInfoPage {
     // Reward Points: 800
     // Availability: Out Of Stock
     private async getProductMetaData() {
-        let productMetaData: string[] = await this.productMetaData.allInnerTexts();
-        for (let meta of productMetaData) {
-            let metadata: string[] = meta.split(':');
-            let metaKey = metadata[0].trim();
-            let metaValue = metadata[1].trim();
+        const productMetaData: string[] = await this.productMetaData.allInnerTexts();
+        for (const meta of productMetaData) {
+            const metadata: string[] = meta.split(':');
+            const metaKey = metadata[0].trim();
+            const metaValue = metadata[1].trim();
 
             this.productMap.set(metaKey, metaValue);
         }
@@ -76,9 +76,9 @@ export class ProductInfoPage {
     // $2,000.00 -- 0th
     // Ex Tax: $2,000.00 --1st
     private async getProductPricingData() {
-        let productPricing: string[] = await this.productPriceData.allInnerTexts();
-        let productPrice = productPricing[0].trim();
-        let productExTax = productPricing[1].split(':')[1].trim();
+        const productPricing: string[] = await this.productPriceData.allInnerTexts();
+        const productPrice = productPricing[0].trim();
+        const productExTax = productPricing[1].split(':')[1].trim();
 
         this.productMap.set('price', productPrice);
         this.productMap.set('extaxprice', productExTax);

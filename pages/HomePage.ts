@@ -21,7 +21,7 @@ export class HomePage {
         this.loginLink = page.getByRole('link', { name: 'Login' });
         this.logoutLink = page.getByRole('link', { name: 'Logout' });
         this.search = page.getByRole('textbox', { name: 'Search' });
-        this.searchIcon = page.locator(`#search > span.input-group-btn > button.btn`);
+        this.searchIcon = page.locator('#search > span.input-group-btn > button.btn');
     }
 
     //3. page actions: 

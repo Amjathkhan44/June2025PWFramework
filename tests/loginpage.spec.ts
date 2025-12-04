@@ -19,7 +19,7 @@ test('Verify valid login @login @sanity',
 
 test('Verify Invalid login', async ({ page, baseURL }) => {
         //AAA
-        let loginPage = new LoginPage(page);
+        const loginPage = new LoginPage(page);
         await loginPage.goToLoginPage(baseURL);
         await loginPage.doLogin('abcdf@nal.com', 'test123456');
         const errorMesg = await loginPage.getInvalidLoginMessage();
