@@ -17,8 +17,8 @@ export class ProductInfoPage {
         this.eleUtil = new ElementUtil(page);
         this.header = page.locator('h1');
         this.imageCount = page.locator('div#content img');
-        this.productMetaData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[1]/li`);
-        this.productPriceData = page.locator(`(//div[@id='content']//ul[@class='list-unstyled'])[2]/li`);
+        this.productMetaData = page.locator('(//div[@id=\'content\']//ul[@class=\'list-unstyled\'])[1]/li');
+        this.productPriceData = page.locator('(//div[@id=\'content\']//ul[@class=\'list-unstyled\'])[2]/li');
 
     }
 
